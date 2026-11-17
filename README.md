@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# AI-Freelance Marketplace (FixIt.ai)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Run both the FastAPI backend and React frontend concurrently in a **single terminal**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Quick Start (Single Terminal)
 
-### `npm start`
+You can use **any** of the following options to run both servers together:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Option 1: Using npm (Recommended)
+```bash
+npm run dev
+# or
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Option 2: Using Python
+```bash
+python run.py
+```
 
-### `npm test`
+### Option 3: Windows Batch Script
+Double-click `run.bat` or run in terminal:
+```cmd
+run.bat
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🌐 Running Services
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once started, both services run concurrently in your single terminal:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Service | URL | Description |
+|---|---|---|
+| **Frontend (React)** | [http://localhost:3000](http://localhost:3000) | Client web app with hot reloading |
+| **Backend (FastAPI)** | [http://127.0.0.1:8000](http://127.0.0.1:8000) | REST API & WebSocket server |
+| **API Docs (Swagger)** | [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) | Interactive API exploration |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🎨 Unified Terminal Logs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The logs in your terminal are color-coded and tagged for readability:
+- `[BACKEND]` (Cyan): Uvicorn server logs and database status
+- `[FRONTEND]` (Magenta): React compilation logs and Webpack output
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🛑 Stopping the Servers
+Press <kbd>Ctrl</kbd> + <kbd>C</kbd> in your terminal at any time. Both the backend and frontend processes (and their worker sub-processes) will shut down cleanly without leaving ports blocked.
