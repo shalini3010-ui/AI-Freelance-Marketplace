@@ -1,0 +1,104 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --secondary-color: #6c757d;
+  --bg-color: #f8f9fa;
+  --text-color: #333333;
+  --dark-bg: #0f172a;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html, #root {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* App Layout Wrapper */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Brand Banner & Logo Styles */
+.app-header-banner {
+  background-color: var(--dark-bg);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.brand-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.brand-logo-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--primary-color);
+}
+
+.brand-logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(45deg, #007bff, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Flexible Main Area */
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Global Form Elements */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+button {
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
